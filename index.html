@@ -235,7 +235,7 @@ var photos={"Lawu":"images/Lawuu.jpeg", "Bokong":"images/bokong.jpeg", "Panderma
 var root=document.documentElement,th=document.getElementById("th");
 th.onclick=function(){var d=root.getAttribute("data-theme")||(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");root.setAttribute("data-theme",d==="dark"?"light":"dark")};
 // typing
-var roles=["Mahasiswa Informatika Polinema","Full-Stack Developer","Data Enthusiast","Hiker","Vibe coder","and a dreamer"],ri=0,ci=0,del=false,ty=document.getElementById("ty");
+var roles=["Mahasiswa Informatika Polinema","Front End Developer","Data Enthusiast","Hiker","Vibe coder","and a dreamer"],ri=0,ci=0,del=false,ty=document.getElementById("ty");
 (function t(){var w=roles[ri];ty.textContent=w.slice(0,ci);if(!del&&ci<w.length){ci++;setTimeout(t,80)}else if(!del){del=true;setTimeout(t,1400)}else if(ci>0){ci--;setTimeout(t,40)}else{del=false;ri=(ri+1)%roles.length;setTimeout(t,300)}})();
 // skills
 var SK=[["Frontend (HTML, CSS, JavaScript)",70],["Backend and REST API",65],["Database (SQL)",65],["Data processing (Python)",55],["Git and GitHub",75],["Communication and teamwork",85]];
