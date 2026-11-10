@@ -3,274 +3,194 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Farrel Andika Chandra | Portfolio</title>
+<title>Farrel Andika Chandra | Frontend Developer & UI/UX Designer</title>
+<meta name="description" content="Informatics student at Polinema. Frontend developer and UI/UX designer based in Malang.">
+<meta property="og:title" content="Farrel Andika Chandra | Portfolio">
+<meta property="og:description" content="Frontend developer and UI/UX designer based in Malang.">
+<meta property="og:image" content="images/hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500&family=Permanent+Marker&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0e1124;--bg2:#151a36;--card:#1a2040;--tx:#ecebf7;--mut:#9aa0c4;--ac:#5eead4;--ac2:#ff8a5c;--bd:#2a3166;--sk1:#1d1b4b;--sk2:#6b2d6e;--sk3:#ff8a5c;--m1:#161a3d;--m2:#0e1124;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
-:root[data-theme="light"]{--bg:#eef2fa;--bg2:#e3e9f6;--card:#fff;--tx:#1a1f3d;--mut:#555d86;--ac:#0b8f7e;--ac2:#d9552a;--bd:#ccd4ea;--sk1:#9fc3ee;--sk2:#f6c4b0;--sk3:#ffe3b8;--m1:#6f86b8;--m2:#eef2fa;color-scheme:light}
-@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#eef2fa;--bg2:#e3e9f6;--card:#fff;--tx:#1a1f3d;--mut:#555d86;--ac:#0b8f7e;--ac2:#d9552a;--bd:#ccd4ea;--sk1:#9fc3ee;--sk2:#f6c4b0;--sk3:#ffe3b8;--m1:#6f86b8;--m2:#eef2fa;color-scheme:light}}
+:root{--bg:#0e1124;--bg2:#151a36;--card:#1a2040;--tx:#ecebf7;--mut:#9aa0c4;--ac:#5eead4;--ac2:#ff8a5c;--bd:#2a3166;box-sizing:border-box;color-scheme:dark}
+:root[data-theme="light"]{--bg:#eef2fa;--bg2:#e3e9f6;--card:#fff;--tx:#1a1f3d;--mut:#555d86;--ac:#0b8f7e;--ac2:#d9552a;--bd:#ccd4ea;color-scheme:light}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#eef2fa;--bg2:#e3e9f6;--card:#fff;--tx:#1a1f3d;--mut:#555d86;--ac:#0b8f7e;--ac2:#d9552a;--bd:#ccd4ea;color-scheme:light}}
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
 body{margin:0;background:var(--bg);color:var(--tx);font:400 1rem/1.65 'DM Sans',system-ui,sans-serif;overflow-x:hidden}
 h1,h2,h3{font-family:'Bricolage Grotesque',system-ui,sans-serif;line-height:1.1;margin:0}
 a{color:var(--ac);text-decoration:none}a:hover{text-decoration:underline}
 :focus-visible{outline:2px solid var(--ac);outline-offset:3px}
-nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:.7rem 1.2rem;background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
-nav b{font-family:'Bricolage Grotesque';font-size:1.05rem}
-nav .l{display:flex;gap:1.1rem;align-items:center;font-size:.9rem}
-nav .l a{color:var(--mut)}nav .l a:hover{color:var(--tx);text-decoration:none}
-#th{background:var(--card);border:1px solid var(--bd);color:var(--tx);border-radius:99px;padding:.3rem .8rem;cursor:pointer;font:inherit;font-size:.85rem}
-@media(max-width:720px){nav .l a{display:none}}
-/* hero */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:6rem 1.5rem 14rem;background:linear-gradient(var(--sk1),var(--sk2) 62%,var(--sk3));overflow:hidden}
-.hero .in{position:relative;z-index:3;max-width:760px;margin:0 auto 0 max(0px,calc((100vw - 1100px)/2))}
-.hero h1{font-size:clamp(2.3rem,7vw,4.6rem);font-weight:800;color:#fff;animation:up .9s both}
-.hero .role{font-size:clamp(1rem,2.5vw,1.3rem);color:#ffe9dc;margin:1rem 0 .4rem;min-height:1.8em;animation:up .9s .15s both}
-.hero .role i{display:inline-block;width:2px;height:1.1em;background:#5eead4;vertical-align:-.15em;margin-left:3px;animation:bl 1s steps(1) infinite}
-.hero p.s{color:#f5e6f0;max-width:520px;animation:up .9s .3s both}
-.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem;animation:up .9s .45s both}
-.btn{padding:.7rem 1.3rem;border-radius:10px;border:1.5px solid #fff;color:#fff;font-weight:500;background:transparent;cursor:pointer;font-size:.95rem}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:calc(.9rem + env(safe-area-inset-top,0px)) 1.6rem .9rem;transition:background .3s}
+nav.sc{background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+nav .l{display:flex;gap:1.1rem}
+nav .l a,nav .ic a,#th{color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.35)}
+nav .l a{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;padding:.2rem .5rem}
+nav .l a:hover{text-decoration:none;opacity:.8}
+nav .ic{display:flex;gap:1rem;align-items:center}nav .ic a,#th{display:flex;background:none;border:0;padding:0;font-size:1.2rem;cursor:pointer}
+nav.sc .l a,nav.sc .ic a,nav.sc #th{color:var(--tx);text-shadow:none}
+@media(max-width:720px){nav .l{display:none}nav{justify-content:flex-end}}
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:7rem 1.5rem 5rem;background:#0b1a14;overflow:hidden}
+.hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 55%;animation:kb 18s ease-out both}
+.shade{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(6,14,12,.72),rgba(6,14,12,.1) 65%),linear-gradient(transparent 65%,var(--bg))}
+.hero .in{position:relative;z-index:4;max-width:1100px;margin:0 auto;width:100%}
+.brush{font-family:'Permanent Marker',cursive;font-weight:400;font-size:clamp(3.4rem,11vw,8rem);line-height:.95;transform:rotate(-3deg);color:#fff;text-shadow:0 4px 24px rgba(0,0,0,.3);animation:up .9s both}
+.s2{max-width:360px;margin:1.2rem 0 0 auto;text-align:right;color:#fff;animation:up .9s .3s both}
+.cur2{display:inline-block;width:2px;height:1em;background:#5eead4;vertical-align:-.12em;animation:bl 1s steps(1) infinite}
+@media(max-width:760px){.s2{margin-left:0;text-align:left}}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
+.btn{padding:.7rem 1.3rem;border-radius:10px;border:1.5px solid #fff;color:#fff;font-weight:500;transition:transform .2s}
 .btn.p{background:#5eead4;border-color:#5eead4;color:#06241f}.btn:hover{text-decoration:none;transform:translateY(-2px)}
-.btn{transition:transform .2s}
-.sun{position:absolute;right:12%;bottom:26%;width:clamp(90px,16vw,190px);aspect-ratio:1;border-radius:50%;background:radial-gradient(#fff6d6,#ffb36b 60%,transparent 72%);filter:blur(1px);z-index:1}
-.ridge{position:absolute;left:0;right:0;bottom:-2px;width:100%;z-index:2;will-change:transform}
-.stars{position:absolute;inset:0;z-index:0}
-.star{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;animation:tw 3s infinite}
+@keyframes kb{from{transform:scale(1.12)}to{transform:scale(1)}}
 @keyframes up{from{opacity:0;transform:translateY(24px)}}
-@keyframes bl{50%{opacity:0}}@keyframes tw{50%{opacity:.15}}
-/* sections */
+@keyframes bl{50%{opacity:0}}
 section{padding:5rem 1.5rem}
 .w{max-width:1040px;margin:0 auto}
-.sec h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.4rem}
-.sec .sub{color:var(--mut);margin:0 0 2rem;max-width:56ch}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.4rem}
+.sub{color:var(--mut);margin:0 0 2rem;max-width:56ch}
 .alt{background:var(--bg2)}
-.grid{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+.grid{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
 .card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:1.4rem;transition:transform .25s,border-color .25s}
 .card:hover{transform:translateY(-4px);border-color:var(--ac)}
 .card h3{font-size:1.2rem;margin-bottom:.5rem}
 .tag{display:inline-block;font-size:.78rem;padding:.15rem .6rem;border-radius:99px;border:1px solid var(--bd);color:var(--mut);margin:.15rem .2rem 0 0}
 .tag.on{border-color:var(--ac2);color:var(--ac2)}
 .mut{color:var(--mut);font-size:.92rem}
-.about{display:grid;gap:2rem;grid-template-columns:1.4fr 1fr;align-items:start}
-@media(max-width:760px){.about{grid-template-columns:1fr}}
-.stat{display:flex;gap:1.4rem;flex-wrap:wrap}.stat div{min-width:90px}
-.stat b{display:block;font:800 2rem 'Bricolage Grotesque';color:var(--ac)}
+.intro{font-size:clamp(1.15rem,2.6vw,1.6rem);line-height:1.6;max-width:30em;margin:0 auto}
+/* project cover */
+.cov{aspect-ratio:16/9;margin:-1.4rem -1.4rem 1.1rem;border-radius:14px 14px 0 0;overflow:hidden;background:linear-gradient(145deg,#2a3166,#6b2d6e)}
+.cov img{width:100%;height:100%;object-fit:contain;display:block}
 /* skills */
-.sk{margin-bottom:.9rem}.sk .r{display:flex;justify-content:space-between;font-size:.9rem}
-.bar{height:8px;background:var(--bd);border-radius:9px;overflow:hidden;margin-top:.3rem}
-.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--ac),var(--ac2));border-radius:9px;transition:width 1.3s cubic-bezier(.2,.8,.2,1)}
+.two{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
 /* timeline */
-.tl{border-left:2px solid var(--bd);padding-left:1.4rem;margin-left:.4rem}
-.tl>div{position:relative;margin-bottom:1.6rem}
-.tl>div::before{content:"";position:absolute;left:-1.95rem;top:.45rem;width:11px;height:11px;border-radius:50%;background:var(--ac2)}
-.tl h3{font-size:1.15rem}
-/* slider */
-.slider{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:16/8;min-height:230px;border:1px solid var(--bd)}
-.slide{position:absolute;inset:0;opacity:0;transition:opacity .9s;display:flex;align-items:flex-end}
-.slide.on{opacity:1}
-.slide svg,.slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.slide .cap{position:relative;z-index:2;padding:1.2rem 1.5rem;color:#fff;width:100%;background:linear-gradient(transparent,rgba(5,8,25,.75))}
-.slide .cap b{font:700 1.5rem 'Bricolage Grotesque'}
-.dots{display:flex;gap:.4rem;justify-content:center;margin:.9rem 0 0;flex-wrap:wrap}
-.dots button{width:10px;height:10px;border-radius:50%;border:0;background:var(--bd);cursor:pointer;padding:0}
-.dots button.on{background:var(--ac2);width:26px;border-radius:9px;transition:width .3s}
-.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
-.chip{padding:.35rem .9rem;border-radius:99px;background:var(--card);border:1px solid var(--bd);font-size:.9rem}
-.chip.w2{border-style:dashed;color:var(--mut)}
-blockquote{margin:2.2rem 0 0;padding:1.4rem 1.6rem;border-left:4px solid var(--ac2);background:var(--card);border-radius:0 14px 14px 0;font-size:1.05rem}
-/* player */
-.song{display:flex;gap:.9rem;align-items:center;padding:.8rem 0;border-bottom:1px solid var(--bd)}
-.song:last-child{border:0}
-.eq{display:flex;gap:3px;align-items:flex-end;height:22px;min-width:24px}
-.eq i{width:4px;background:var(--ac);border-radius:2px;animation:eq 1s ease-in-out infinite alternate}
-.eq i:nth-child(2){animation-delay:.2s}.eq i:nth-child(3){animation-delay:.4s}.eq i:nth-child(4){animation-delay:.1s}
-@keyframes eq{from{height:4px}to{height:22px}}
-.song a{margin-left:auto;font-size:.85rem;white-space:nowrap}
-.contact{text-align:center}
-.contact .btns{justify-content:center}.contact .btn{color:var(--tx);border-color:var(--bd)}
-.contact .btn.p{color:#06241f;border-color:var(--ac)}
-footer{padding:2rem 1rem;text-align:center;color:var(--mut);font-size:.85rem}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.bar i{width:var(--w)!important}}
-
-nav{justify-content:space-between;padding:.9rem 1.6rem;background:transparent;border:0;backdrop-filter:none}
-nav .l a{color:#fff;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;padding:.2rem .5rem;text-shadow:0 1px 6px rgba(0,0,0,.35)}
-nav .l a.cur{background:#fff;color:#1d1b4b;text-shadow:none}
-nav .ic{display:flex;gap:1rem;align-items:center}nav .ic a,#th{color:#fff;display:flex;background:none;border:0;padding:0;font-size:1.2rem;cursor:pointer}
-nav.sc{background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
-@media(max-width:720px){nav .l{display:none}nav{justify-content:flex-end}}
-.hero{padding:7rem 1.5rem 8rem}.hero .in{max-width:1100px;margin:0 auto;width:100%;position:relative;z-index:4}
-.brush{font-family:'Permanent Marker',cursive!important;font-weight:400!important;font-size:clamp(3.4rem,11vw,8rem)!important;line-height:.95!important;transform:rotate(-3deg);text-shadow:0 4px 24px rgba(0,0,0,.3)}
-.s2{max-width:340px;margin:1.2rem 0 0 auto;text-align:right;color:#fff;animation:up .9s .3s both}
-.cur2{display:inline-block;width:2px;height:1em;background:#5eead4;vertical-align:-.12em;animation:bl 1s steps(1) infinite}
-@media(max-width:760px){.s2{margin-left:0;text-align:left}}
-#r1{z-index:1}#r2{z-index:3}
-.mist{position:absolute;left:-10%;right:-10%;bottom:12%;height:38%;z-index:2;background:radial-gradient(ellipse at 30% 60%,rgba(255,255,255,.28),transparent 60%),radial-gradient(ellipse at 75% 50%,rgba(255,220,230,.22),transparent 60%);animation:dr 14s ease-in-out infinite alternate}
-@keyframes dr{to{transform:translateX(6%)}}
-.ph{position:absolute;z-index:2;right:max(2%,calc((100vw - 1100px)/2));bottom:6%;height:86%;aspect-ratio:4/5;animation:up 1.1s .2s both}
-.ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) contrast(1.08) sepia(.18) hue-rotate(-12deg);-webkit-mask-image:radial-gradient(ellipse 62% 66% at 50% 46%,#000 52%,transparent 100%);mask-image:radial-gradient(ellipse 62% 66% at 50% 46%,#000 52%,transparent 100%)}
-.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(107,45,110,.0),rgba(255,138,92,.35));mix-blend-mode:soft-light;-webkit-mask-image:radial-gradient(ellipse 62% 66% at 50% 46%,#000 52%,transparent 100%);mask-image:radial-gradient(ellipse 62% 66% at 50% 46%,#000 52%,transparent 100%)}
-@media(max-width:760px){.ph{height:52%;right:-10%;opacity:.9}.hero .in{margin-top:-6rem}}
-.intro{font-size:clamp(1.15rem,2.6vw,1.6rem);line-height:1.6;max-width:30em;margin:0 auto 2rem}
-.tl2{position:relative;padding-left:2.4rem;margin-left:.6rem}
-.tl2::before,.tl2 .fill{content:"";position:absolute;left:0;top:0;width:2px;height:100%;background:var(--bd)}
-.tl2 .fill{background:linear-gradient(var(--ac),var(--ac2));height:0;transition:height .15s}
-.ev{position:relative;margin-bottom:1.6rem;opacity:0;transform:translateX(40px) scale(.97);filter:blur(4px);transition:all .8s cubic-bezier(.2,.8,.2,1)}
-.ev.in{opacity:1;transform:none;filter:none}
-.ev .dot{position:absolute;left:-3.35rem;top:.5rem;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--card);border:2px solid var(--bd);display:grid;place-items:center;font-size:1rem;transition:border-color .6s,transform .6s}
-.ev.in .dot{border-color:var(--ac2);transform:scale(1.12)}
-.ev .card{background:linear-gradient(135deg,var(--card),color-mix(in srgb,var(--card) 88%,var(--ac2)))}
-.ev ul{margin:.6rem 0;padding-left:1.1rem;color:var(--mut);font-size:.92rem}
+.tl{border-left:2px solid var(--bd);padding-left:1.6rem;margin-left:.5rem}
+.tl>article{position:relative;margin-bottom:1.4rem}
+.tl>article::before{content:"";position:absolute;left:-2.15rem;top:.5rem;width:11px;height:11px;border-radius:50%;background:var(--ac2)}
+.tl ul{margin:.6rem 0;padding-left:1.1rem;color:var(--mut);font-size:.92rem}
+/* hiking */
+.hk{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.hk figure{margin:0;position:relative;aspect-ratio:4/5;border-radius:14px;overflow:hidden;border:1px solid var(--bd);background:linear-gradient(145deg,#1d1b4b,#6b2d6e)}
+.hk img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.hk figure:hover img{transform:scale(1.05)}
+.hk figcaption{position:absolute;left:0;right:0;bottom:0;padding:1rem;color:#fff;background:linear-gradient(transparent,rgba(5,8,25,.8));font-size:.85rem}
+.hk b{display:block;font:700 1.15rem 'Bricolage Grotesque'}
+/* outside coding */
 .sh{margin:2.6rem 0 1rem;font-size:1.25rem}
-.row3{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
-.row2{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
-.ph0{display:grid;place-items:center;text-align:center;padding:1rem;color:#fff;font-weight:700;background:linear-gradient(145deg,#2a3166,#6b2d6e)}
-.mc{perspective:700px}.mc .cv{aspect-ratio:2/3;border-radius:12px;overflow:hidden;border:1px solid var(--bd);transition:transform .4s;transform-style:preserve-3d}
-.mc:hover .cv{transform:rotateY(-8deg) translateY(-4px)}
-.cv img,.ci img{width:100%;height:100%;object-fit:cover;display:block}
-.mc p{margin:.6rem 0 0;font-weight:500}
-.vc .vf{aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid var(--bd);position:relative;background:var(--card)}
-.vf iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.pb{border:0;cursor:pointer;width:100%;height:100%;display:grid;place-items:center;font-size:2.2rem;color:#fff;background:linear-gradient(145deg,#1d1b4b,#ff8a5c)}
-.vc p{margin:.5rem 0 0}
-.cc .ci{aspect-ratio:4/3;position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--bd)}
-.cc .ci>*{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity 1s}.cc .ci>.on{opacity:1}
-.cc h3{margin:.8rem 0 .2rem}
 .player{display:grid;gap:1rem;grid-template-columns:1.1fr 1fr;align-items:start}
 @media(max-width:760px){.player{grid-template-columns:1fr}}
-.scr{aspect-ratio:16/9;border-radius:12px;background:linear-gradient(145deg,#1d1b4b,#3a1f5c);display:grid;place-items:center;overflow:hidden;position:relative}
-.scr iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.song{cursor:pointer}.song.on b{color:var(--ac)}.song:not(.on) .eq i{animation-play-state:paused;height:5px}
-.song a{font-size:.8rem}
-
-.hero{background:#0b1a14;align-items:flex-end;padding-bottom:5rem}
-.hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 55%;animation:kb 18s ease-out both}
-@keyframes kb{from{transform:scale(1.12)}to{transform:scale(1)}}
-.shade{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(6,14,12,.72),rgba(6,14,12,.1) 65%),linear-gradient(transparent 65%,var(--bg))}
-@media(max-width:760px){.hero .bg{object-position:62% 50%}.hero .in{margin-top:0}}
-#vd{grid-template-columns:minmax(0,640px)}
-.hm{display:grid;grid-auto-flow:column;grid-template-rows:repeat(7,11px);grid-auto-columns:11px;gap:3px;overflow-x:auto;padding-bottom:.5rem}
-.hm i{border-radius:2px;background:var(--bd)}
-.hm i[data-l="1"]{background:color-mix(in srgb,var(--ac) 30%,var(--bd))}.hm i[data-l="2"]{background:color-mix(in srgb,var(--ac) 55%,var(--bd))}.hm i[data-l="3"]{background:color-mix(in srgb,var(--ac) 80%,var(--bd))}.hm i[data-l="4"]{background:var(--ac)}
+.scr{min-height:152px;border-radius:12px;background:linear-gradient(145deg,#1d1b4b,#3a1f5c);display:grid;place-items:center;overflow:hidden;color:#fff;text-align:center;padding:0}
+.scr iframe{width:100%;height:152px;border:0;display:block}
+.song{display:flex;gap:.9rem;align-items:center;padding:.8rem 0;border-bottom:1px solid var(--bd);cursor:pointer}
+.song:last-child{border:0}.song.on b{color:var(--ac)}
+.eq{display:flex;gap:3px;align-items:flex-end;height:22px;min-width:24px}
+.eq i{width:4px;height:5px;background:var(--ac);border-radius:2px;animation:eq 1s ease-in-out infinite alternate;animation-play-state:paused}
+.song.on .eq i{animation-play-state:running}
+.eq i:nth-child(2){animation-delay:.2s}.eq i:nth-child(3){animation-delay:.4s}.eq i:nth-child(4){animation-delay:.1s}
+@keyframes eq{from{height:4px}to{height:22px}}
+.song a{margin-left:auto;font-size:.8rem;white-space:nowrap}
+.row3{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.row2{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.mc{perspective:700px}
+.cv0{aspect-ratio:2/3;border-radius:12px;overflow:hidden;border:1px solid var(--bd);background:linear-gradient(145deg,#2a3166,#6b2d6e);transition:transform .4s;transform-style:preserve-3d}
+.cv0 img,.ci img{width:100%;height:100%;object-fit:cover;display:block}
+@media(hover:hover){.mc:hover .cv0{transform:rotateY(-8deg) translateY(-4px)}}
+.mc p{margin:.6rem 0 0;font-weight:500}
+.ci{aspect-ratio:4/3;border-radius:14px;overflow:hidden;border:1px solid var(--bd);background:linear-gradient(145deg,#2a3166,#6b2d6e)}
+.cc h3{margin:.8rem 0 .2rem}
+.contact{text-align:center}.contact .btns{justify-content:center}.contact .btn{color:var(--tx);border-color:var(--bd)}.contact .btn.p{color:#06241f;border-color:var(--ac)}
+footer{padding:2rem 1rem;text-align:center;color:var(--mut);font-size:.85rem}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<nav><div class="l"><a href="#" class="cur">Home</a><a href="#tentang">Tentang</a><a href="#proyek">Proyek</a><a href="#pengalaman">Pengalaman</a><a href="#gunung">Gunung</a><a href="#kontak">Kontak</a></div><div class="ic"><a href="https://github.com/farrelandika" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg></a><a href="#" id="nli" onclick="return false" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6c.6-1 2-1.9 3.9-1.9 4 0 4.8 2.600 4.8 6V21h-4v-5c0-1.300 0-3-1.900-3s-2.100 1.400-2.100 2.900V21h-4z"/></svg></a><a href="mailto:farrelandika14@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1.500 2L12 12.500 19.500 7z"/></svg></a><button id="th" aria-label="Ganti tema">&#9680;</button></div></nav>
+<nav><div class="l"><a href="#home">Home</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#beyond">Beyond Code</a><a href="#contact">Contact</a></div>
+<div class="ic"><a href="https://github.com/farrelandika" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.300-1.300-1.700-1.300-1.700-1-.7.1-.7.1-.7 1.200.1 1.800 1.200 1.800 1.200 1 1.800 2.700 1.300 3.400 1 .1-.8.4-1.300.7-1.600-2.600-.3-5.300-1.300-5.300-5.700 0-1.300.5-2.300 1.200-3.100-.1-.3-.5-1.500.1-3.100 0 0 1-.3 3.200 1.200a11 11 0 0 1 5.800 0c2.200-1.500 3.200-1.200 3.200-1.200.6 1.600.2 2.800.1 3.100.8.8 1.200 1.800 1.200 3.100 0 4.400-2.700 5.400-5.300 5.700.4.4.8 1.100.8 2.200v3.200c0 .3.2.7.8.6A11.500 11.500 0 0 0 12 .5z"/></svg></a>
+<a href="https://www.linkedin.com/in/farrel-andika-chandra-41358a345" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M4.980 3.500a2.500 2.500 0 1 1 0 5 2.500 2.500 0 0 1 0-5zM3 9.500h4V21H3zM9.500 9.500h3.800v1.600c.6-1 2-1.900 3.900-1.900 4 0 4.800 2.600 4.800 6V21h-4v-5c0-1.300 0-3-1.900-3s-2.100 1.400-2.100 2.900V21h-4z"/></svg></a>
+<a href="mailto:farrelandika14@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1.500 2L12 12.500 19.500 7z"/></svg></a>
+<button id="th" aria-label="Toggle theme">&#9680;</button></div></nav>
 
-<header class="hero"><img class="bg" src="images/hero.jpg" alt="Farrel duduk menghadap air terjun"><div class="shade"></div>
-<div class="in"><h1 class="brush">Farrel<br>Andika Chandra</h1><p class="s2">satu baris kode, satu puncak, satu langkah dalam satu waktu. <span id="ty"></span><i class="cur2"></i></p>
-<div class="btns"><a class="btn p" href="#proyek">Lihat proyek</a><a class="btn" href="#" id="cv" onclick="return false">Unduh CV</a></div></div></header>
+<header class="hero" id="home"><img class="bg" src="images/hero.jpg" alt="Farrel sitting facing a waterfall"><div class="shade"></div>
+<div class="in"><h1 class="brush">Farrel<br>Andika Chandra</h1>
+<p class="s2">One line of code, one summit, one step at a time. <span id="ty"></span><i class="cur2"></i></p>
+<div class="btns"><a class="btn p" href="#projects">View projects</a><a class="btn" href="https://tlyy20.github.io/" target="_blank" rel="noopener">View CV</a></div></div></header>
 
-<section class="sec" id="tentang"><div class="w" style="text-align:center"><p class="intro">Hi, I'm Farrel. I'm an Informatics student at Polinema who builds <b>functional web applications</b> and turns <b>data</b> into something useful. Away from the screen, I hike mountains and look for cozy cafes.</p>
-<div class="stat" style="justify-content:center"><div><b data-n="3">0</b><span class="mut">PBL projects</span></div><div><b data-n="7">0</b><span class="mut">mountains hiked</span></div><div><b data-n="3">0</b><span class="mut">organizational experiences</span></div></div></div></section>
+<section id="about"><div class="w" style="text-align:center"><p class="intro">Hi, I'm Farrel, an Informatics student at Polinema. I design and build <b>clean, functional web interfaces</b> and enjoy turning <b>data</b> into something useful. Open to internships.</p></div></section>
 
-<section class="sec alt" id="proyek"><div class="w">
+<section class="alt" id="projects"><div class="w">
 <h2>PBL Projects</h2><p class="sub">Three semesters, three team projects. Click a title to open its repository.</p>
 <div class="grid">
-<div class="card"><span class="tag">Semester 3</span><h3><a href="https://github.com/rafiadpr/pbl-dt" target="_blank" rel="noopener">pbl-dt</a></h3><p class="mut">My first team project, where we were tasked with designing a website for one of the laboratories in the Information Technology Department: the DT (Data Technologies) Lab. I contributed to the website's UI/UX design and implementation.</p><span class="tag">Full-stack</span><span class="tag">Team</span></div>
-<div class="card"><span class="tag">Semester 4</span><h3><a href="https://github.com/adambahyn/PEBEEL-GENAP-2026" target="_blank" rel="noopener">PEBEEL Genap 2026</a></h3><p class="mut">For the 2026 even-semester Project-Based Learning (PBL), our team was responsible for developing a car rental web system serving the Malang and Surabaya areas. I actively contributed to UI/UX design and backend development using the Laravel framework.</p><span class="tag">Full-stack</span><span class="tag">Team</span></div>
-<div class="card"><span class="tag on">Semester 5 · in progress</span><h3><a href="https://github.com/Olyvian/UMKM_SIGHT" target="_blank" rel="noopener">UMKM SIGHT</a></h3><p class="mut">An ongoing project for small and medium-sized businesses. For this PBL, we are building a product inventory prediction and analysis system. The mobile app uses time series forecasting. I contribute to the app's backend, with responsibilities that may include training AI models for ML service integration and notifications, building the backend API, and more.</p><span class="tag">Data</span><span class="tag">Team</span></div>
-</div></div></section>
-
-<section class="sec" id="keahlian"><div class="w">
-<h2>Skills</h2>
-<div class="about"><div id="skills"></div>
-<div class="card"><h3>English</h3><p class="mut">Comfortable speaking and debating: one year in English Debate during high school. I have not taken an official test such as TOEFL or IELTS.</p><span class="tag">Debate</span><span class="tag">Communication</span><span class="tag">Teamwork</span><p class="mut" style="margin-top:1rem">Full list of languages and frameworks: <a href="https://github.com/farrelandika" target="_blank" rel="noopener">github.com/farrelandika</a></p></div></div>
+<div class="card"><!-- GANTI src dengan gambar cover proyek kamu -->
+<div class="cov"><img src="images/imagee.png" alt="pbl-dt cover" onerror="this.remove()"></div>
+<span class="tag">Semester 3</span><h3><a href="https://github.com/rafiadpr/pbl-dt" target="_blank" rel="noopener">pbl-dt</a></h3>
+<p class="mut">A website for the DT (Data Technologies) Lab in the Information Technology Department. I contributed to the UI/UX design and its implementation.</p>
+<span class="tag">Frontend</span><span class="tag">UI/UX</span></div>
+<div class="card">
+<div class="cov"><img src="images/Modern Adam Rental Car Website.png" alt="Adam Rental" onerror="this.remove()"></div>
+<span class="tag">Semester 4</span><h3><a href="https://github.com/adambahyn/PEBEEL-GENAP-2026" target="_blank" rel="noopener">PEBEEL Genap 2026</a></h3>
+<p class="mut">A car rental web system serving the Malang and Surabaya areas. I worked on the UI/UX design and on backend development with Laravel.</p>
+<span class="tag">Frontend</span><span class="tag">UI/UX</span><span class="tag">Laravel</span></div>
+<div class="card">
+<div class="cov"><img src="images/image.png" alt="UMKM SIGHT cover" onerror="this.remove()"></div>
+<span class="tag on">Semester 5 · in progress</span><h3><a href="https://github.com/Olyvian/UMKM_SIGHT" target="_blank" rel="noopener">UMKM SIGHT</a></h3>
+<p class="mut">A mobile app for small businesses that predicts and analyzes product inventory using time series forecasting. I build the backend API and the ML service integration.</p>
+<span class="tag">Backend</span><span class="tag">Time series</span></div>
+</div>
+<h3 class="sh">Academic Article</h3>
+<div class="card"><h3><a href="https://drive.google.com/file/d/1lbIaQK8E24qXAKAbgO2Ir7oqrbcGXPWx/view?usp=sharing" target="_blank" rel="noopener">Perbandingan Metode CRITIC-TOPSIS dan Entropy-MABAC untuk Pemilihan Penerima BLT Dana Desa</a></h3>
+<p class="mut">A comparison of two decision-support methods for selecting village fund cash assistance recipients. <!-- Tambahkan status: jurnal / prosiding / tugas kuliah --></p></div>
 </div></section>
 
-<section class="sec alt" id="pengalaman"><div class="w"><h2>Organizational Experience</h2><p class="sub">Learning to lead, work in the field, and speak in front of an audience.</p>
-<div class="tl2"><div class="fill" id="tlf"></div>
-<article class="ev"><span class="dot">&#128227;</span><div class="card"><span class="tag on">2024–2025</span><h3>INFOKOM Department, KPMB Malang</h3><p class="mut">An organization under the Balikpapan City Government.</p><ul><li>Visited high schools in Balikpapan to introduce universities in Malang.</li><li>Organized a blood drive with residents of the Permata Jingga housing complex.</li></ul><a href="#" class="tag" id="s1" onclick="return false">View certificate (PDF)</a></div></article>
-<article class="ev"><span class="dot">&#127957;</span><div class="card"><span class="tag on">2025–2026</span><h3>BKM (Bhakti Karya Mahasiswa)Volunteer: PDD</h3><p class="mut">I was volunteering in PBM proker in which, BKM members stay for several days in an underserved village to support physical and non-physical development.</p><ul><li>Location: Girimulyo Village, Gedangan District, Malang Regency.</li><li>Role: PDD for the PBM program.</li></ul><a href="#" class="tag" id="s2" onclick="return false">View certificate (photo)</a></div></article>
-<article class="ev"><span class="dot">&#127908;</span><div class="card"><span class="tag on">2022–2023</span><h3>English Debate, High School</h3><p class="mut">Spent a year practicing quick thinking, building arguments, and speaking in English.</p></div></article>
+<section id="skills"><div class="w"><h2>Skills</h2><p class="sub">Grouped by what I actually use them for.</p>
+<div class="two">
+<div class="card"><h3>Frontend & Design</h3><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">UI/UX Design</span><span class="tag">Figma</span></div>
+<div class="card"><h3>Backend & Data</h3><span class="tag">Laravel</span><span class="tag">REST API</span><span class="tag">SQL</span><span class="tag">Python</span></div>
+<div class="card"><h3>Tools</h3><span class="tag">Git</span><span class="tag">GitHub</span></div>
+<div class="card"><h3>Communication</h3><span class="tag">English debate</span><span class="tag">Teamwork</span><p class="mut" style="margin-top:.8rem">One year of English debate in high school. No official TOEFL/IELTS yet.</p></div>
 </div></div></section>
 
-<section class="sec" id="sertifikat"><div class="w">
-<h2>Certificate and Article</h2><p class="sub">A certificate and an academic article highlighting my experience and work.</p>
-<div class="grid">
-<div class="card"><h3>KPMB Certificate</h3><p class="mut"><a href="images/20261018080948PIAGAM%20KPMB%202025-20.pdf" target="_blank" rel="noopener">View certificate (PDF)</a></p></div>
-<div class="card"><h3><a href="https://drive.google.com/file/d/1lbIaQK8E24qXAKAbgO2Ir7oqrbcGXPWx/view?usp=sharing" target="_blank" rel="noopener">Perbandingan Metode CRITIC-TOPSIS dan Entropy-MABAC untuk Pemilihan Penerima BLT Dana Desa</a></h3></div>
+<section class="alt" id="experience"><div class="w"><h2>Organizational Experience</h2><p class="sub">Learning to lead, work in the field, and speak in front of an audience.</p>
+<div class="tl">
+<article class="card"><span class="tag on">2024–2025</span><h3>INFOKOM Department, KPMB Malang</h3><p class="mut">An organization under the Balikpapan City Government.</p><ul><li>Visited high schools in Balikpapan to introduce universities in Malang.</li><li>Organized a blood drive with residents of the Permata Jingga housing complex.</li></ul><a class="tag" href="images/20261018080948PIAGAM%20KPMB%202025-20.pdf" target="_blank" rel="noopener">View certificate (PDF)</a></article>
+<article class="card"><span class="tag on">2025–2026</span><h3>BKM (Bhakti Karya Mahasiswa), Volunteer in Documentation (PDD)</h3><p class="mut">Took part in a community service program where members live for several days in an underserved village to support its physical and non-physical development.</p><ul><li>Location: Girimulyo Village, Gedangan District, Malang Regency.</li><li>Role: documentation (PDD) for the program.</li></ul><a class="tag" href="images/OnlinePhotoScanner-11_3_3_5.pdf" target="_blank" rel="noopener">View certificate (PDF)</a></article>
+<article class="card"><span class="tag on">2022–2023</span><h3>English Debate, High School</h3><p class="mut">A year of practicing quick thinking, building arguments, and speaking in English.</p></article>
 </div></div></section>
 
-<section class="sec alt" id="gunung"><div class="w">
-<h2>Mountains I've Hiked</h2><p class="sub">Every summit begins with a single step, and every trail leaves a story worth remembering.</p>
-<div class="slider" id="sl" aria-roledescription="carousel"></div><div class="dots" id="dots"></div>
-<div class="chips" id="wish"></div>
-<blockquote>There are no shortcuts on a mountain. The load feels heavy during the first few hours, and we learn to keep moving slowly without stopping. Coding is the same: hours of debugging can feel endless until one correct line makes everything work. The satisfaction at the summit and at the <em>build success</em> line feels the same: it means more because the journey was difficult.</blockquote>
-</div></section>
+<section id="beyond"><div class="w"><h2>Beyond Code</h2>
+<h3 class="sh" style="margin-top:1rem">Mountains I've Hiked</h3>
+<p class="sub">Hiking taught me patience: no shortcuts, just steady steps. Coding is the same, and the summit and the <em>build success</em> feel alike.</p>
+<div class="hk" id="hk"></div>
 
-<section class="sec" id="belajar"><div class="w">
-<h2>Currently Learning</h2><p class="sub">Two areas I'm exploring next: connecting devices to data, then using that data to make predictions.</p>
-<div class="grid">
-<div class="card"><h3>Internet of Things</h3><p class="mut">I want to read sensor data and send it to a web application.</p><div class="sk"><div class="r"><span>Progress</span><span>Exploring</span></div><div class="bar"><i data-w="20"></i></div></div></div>
-<div class="card"><h3>Machine Learning</h3><p class="mut">I want to build prediction models from data I process myself.</p><div class="sk"><div class="r"><span>Progress</span><span>Fundamentals</span></div><div class="bar"><i data-w="30"></i></div></div></div>
-</div></div></section>
-
-<section class="sec alt" id="luar"><div class="w"><h2>Outside Coding</h2><p class="sub">Something that helps me with studying.</p>
-<h3 class="sh">Playlist for Studying</h3><div class="player card"><div class="scr" id="scr"><div class="mut" id="np">Select a song to play here</div></div><div id="trk"></div></div>
+<h3 class="sh">Playlist for Studying</h3><div class="player card"><div class="scr" id="scr"></div><div id="trk"></div></div>
 <h3 class="sh">Favorite Manga</h3><div class="row3" id="mg"></div>
-<h3 class="sh">Best Video on Youtube</h3><div class="row3" id="vd"></div>
-<h3 class="sh">My Favorite Cafes in Malang City</h3><div class="row2" id="cf"></div>
+<h3 class="sh">My Favorite Cafes in Malang</h3><div class="row2" id="cf"></div>
 </div></section>
 
-<section class="sec" id="github"><div class="w"><h2>GitHub Activity</h2><p class="sub" id="ghs">Loading contribution data...</p><div class="card"><div class="hm" id="hm"></div></div></div></section>
-<section class="sec contact" id="kontak"><div class="w">
-<h2>Let's Connect</h2><p class="sub" style="margin-inline:auto">Open to internships, project collaborations, and conversations about data.</p>
-<div class="btns"><a class="btn p" href="mailto:farrelandika14@gmail.com">farrelandika14@gmail.com</a><a class="btn" href="https://github.com/farrelandika" target="_blank" rel="noopener">GitHub</a><a class="btn" href="#" id="li" onclick="return false">LinkedIn</a><a class="btn" href="#" id="cv2" onclick="return false">CV</a></div>
-</div></section>
+<section class="alt contact" id="contact"><div class="w"><h2>Let's Connect</h2><p class="sub" style="margin-inline:auto">Open to internships and project collaborations.</p>
+<div class="btns"><a class="btn p" href="mailto:farrelandika14@gmail.com">farrelandika14@gmail.com</a><a class="btn" href="https://github.com/farrelandika" target="_blank" rel="noopener">GitHub</a><a class="btn" href="https://www.linkedin.com/in/farrel-andika-chandra-41358a345" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://tlyy20.github.io/" target="_blank" rel="noopener">CV</a></div></div></section>
 <footer>© 2026 Farrel Andika Chandra · Malang</footer>
 
 <script>
-// ====== ISI SENDIRI ======
-var LINKS={
-    linkedin:"https://www.linkedin.com/in/farrel-andika-chandra-41358a345?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-    cv:"files/cv-farrel.pdf",
-    cert1:"images/20261018080948PIAGAM KPMB 2025-20.pdf",
-    cert2:"files/sertifikat-bkm.jpg"
-};
-var photos={"Lawu":"images/Lawuu.jpeg", "Bokong":"images/bokong.jpeg", "Panderman":"images/LAWU.jpeg", "Bukit Lincing":"images/lincing.jpeg", "Bukit Premium":"images/WhatsApp Image 2026-11-09 at 1.43.37 AM.jpeg", "Andong":"images/Andongg.jpeg", "Budug Asu":"images/budug.jpeg"}; // contoh: {"Lawu":"data:image/jpeg;base64,..."}
-// ==========================
-["li:linkedin","cv:cv","cv2:cv","s1:cert1","s2:cert2"].forEach(function(p){var a=p.split(":"),e=document.getElementById(a[0]);if(LINKS[a[1]]){e.href=LINKS[a[1]];e.target="_blank";e.rel="noopener";e.onclick=null}});
-// theme
-var root=document.documentElement,th=document.getElementById("th");
-th.onclick=function(){var d=root.getAttribute("data-theme")||(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");root.setAttribute("data-theme",d==="dark"?"light":"dark")};
-// typing
-var roles=["Mahasiswa Informatika Polinema","Front End Developer","Data Enthusiast","Hiker","Vibe coder","and a dreamer"],ri=0,ci=0,del=false,ty=document.getElementById("ty");
-(function t(){var w=roles[ri];ty.textContent=w.slice(0,ci);if(!del&&ci<w.length){ci++;setTimeout(t,80)}else if(!del){del=true;setTimeout(t,1400)}else if(ci>0){ci--;setTimeout(t,40)}else{del=false;ri=(ri+1)%roles.length;setTimeout(t,300)}})();
-// skills
-var SK=[["Frontend (HTML, CSS, JavaScript)",70],["Backend and REST API",65],["Database (SQL)",65],["Data processing (Python)",55],["Git and GitHub",75],["Communication and teamwork",85]];
-var sk=document.getElementById("skills");SK.forEach(function(k){sk.insertAdjacentHTML("beforeend",'<div class="sk"><div class="r"><span>'+k[0]+'</span><span>'+k[1]+'%</span></div><div class="bar"><i data-w="'+k[1]+'" style="--w:'+k[1]+'%"></i></div></div>')});
-// reveal bars + counters
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.unobserve(e.target);var t=e.target;if(t.dataset.w)t.style.width=t.dataset.w+"%";if(t.dataset.n){var n=+t.dataset.n,c=0,v=setInterval(function(){t.textContent=++c;if(c>=n)clearInterval(v)},180)}})},{threshold:.4});
-document.querySelectorAll("[data-w],[data-n]").forEach(function(e){io.observe(e)});
-// mountains
-var M=[["Lawu","3,265 m",250],["Bokong","1,746 m",200],["Panderman","2,045 m",160],["Bukit Lincing","1,860 m",30],["Bukit Premium","2,235 m",330],["Budug Asu","1,422 m",280],["Andong","1,726 m",100]];
-var sl=document.getElementById("sl"),dots=document.getElementById("dots"),cur=0,tm;
-M.forEach(function(m,i){var h=m[2],bg=photos[m[0]]?'<img src="'+photos[m[0]]+'" alt="'+m[0]+'">':'<svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="g'+i+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="hsl('+h+',55%,22%)"/><stop offset="1" stop-color="hsl('+(h+40)+',80%,62%)"/></linearGradient></defs><rect width="800" height="400" fill="url(#g'+i+')"/><circle cx="'+(560+i*20)+'" cy="150" r="38" fill="#fff4cf" opacity=".85"/><path d="M0 330 L150 190 L260 270 L400 120 L540 260 L650 180 L800 300 V400 H0Z" fill="hsl('+h+',40%,18%)" opacity=".7"/><path d="M0 370 L120 290 L280 350 L430 250 L600 345 L800 270 V400 H0Z" fill="hsl('+h+',45%,10%)"/></svg>';
-sl.insertAdjacentHTML("beforeend",'<div class="slide'+(i?"":" on")+'">'+bg+'<div class="cap"><b>'+m[0]+'</b><div>'+m[1]+'</div></div></div>');
-var b=document.createElement("button");b.setAttribute("aria-label","Slide "+(i+1));if(!i)b.className="on";b.onclick=function(){go(i,1)};dots.appendChild(b)});
-function go(n,reset){var s=sl.children,d=dots.children;s[cur].classList.remove("on");d[cur].classList.remove("on");cur=(n+M.length)%M.length;s[cur].classList.add("on");d[cur].classList.add("on");if(reset)auto()}
-function auto(){clearInterval(tm);tm=setInterval(function(){go(cur+1)},4000)}auto();
-sl.onmouseenter=function(){clearInterval(tm)};sl.onmouseleave=auto;
-var wish=document.getElementById("wish");wish.innerHTML='<span class="mut" style="align-self:center">On my wishlist:</span>'+["Rinjani","Merbabu","Argopuro (hopefully)"].map(function(x){return '<span class="chip w2">'+x+'</span>'}).join("");
-
-var tracks=[["1979","The Smashing Pumpkins","A6M0yLxLCNA"],["No Other Heart","Mac DeMarco","lPeJMoms_Ag"],["Nothing","Steve Lacy","vQs-U3VlD0U"]];
-var MANGA=[{t:"I Will Love You Till Your Dying Day",src:"images/Love.jpeg"},{t:"Girls' Last Tour",src:"images/Girls' last.jpeg"},{t:"Goodnight Punpun",src:"images/Punpun.jpeg"}];
-var VIDEOS=[{t:"My Favorite Video",id:"Mlmyw9tDsFc"}];
-var CAFES=[{n:"Kidang Djaja Um",d:"A place to unwind and enjoy a coffee.",p:["images/Kidang.jpeg"]},{n:"11 12 Soehat",d:"A comfortable, cool place to work on assignments alone, with great desserts and an Americano just the way I like it.",p:["images/1112.jpeg"]}];
 var $=function(i){return document.getElementById(i)};
-document.getElementById("nli")&&LINKS.linkedin&&($("nli").href=LINKS.linkedin,$("nli").target="_blank",$("nli").onclick=null);
-tracks.forEach(function(t,i){var d=document.createElement("div");d.className="song";d.innerHTML='<div class="eq"><i></i><i></i><i></i><i></i></div><div><b>'+t[0]+'</b><div class="mut">'+t[1]+'</div></div><a href="https://music.youtube.com/watch?v='+t[2]+'" target="_blank" rel="noopener">YT Music</a>';d.onclick=function(e){if(e.target.tagName==="A")return;document.querySelectorAll(".song").forEach(function(s){s.classList.remove("on")});d.classList.add("on");$("scr").innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+t[2]+'?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen title="'+t[0]+'"></iframe><div class="mut" style="padding:1rem">Loading player. If nothing appears, open it using the YT Music button.</div>'};$("trk").appendChild(d)});
-MANGA.forEach(function(m){$("mg").insertAdjacentHTML("beforeend",'<div class="mc"><div class="cv">'+(m.src?'<img src="'+m.src+'" alt="'+m.t+'">':'<div class="ph0" style="height:100%">'+m.t+'</div>')+'</div><p>'+m.t+'</p></div>')});
-VIDEOS.forEach(function(v){var c=document.createElement("div");c.className="vc";c.innerHTML='<div class="vf"><button class="pb" aria-label="Play '+v.t+'" style="background:#000 url(https://i.ytimg.com/vi/'+v.id+'/hqdefault.jpg) center/cover">&#9654;</button></div><p>'+v.t+'</p>';c.querySelector(".pb").onclick=function(){if(!v.id){c.querySelector(".vf").innerHTML='<div class="ph0" style="height:100%">Add the video ID in VIDEOS</div>';return}c.querySelector(".vf").innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+v.id+'?autoplay=1" allowfullscreen title="'+v.t+'"></iframe>'};$("vd").appendChild(c)});
-CAFES.forEach(function(c){var ps=c.p.length?c.p.map(function(s,i){return '<img src="'+s+'" alt="'+c.n+'" class="'+(i?"":"on")+'">'}).join(""):'<div class="ph0 on">Photos of '+c.n+' coming soon</div>';var d=document.createElement("div");d.className="cc";d.innerHTML='<div class="ci">'+ps+'</div><h3>'+c.n+'</h3><p class="mut" style="margin:0">'+c.d+'</p>';$("cf").appendChild(d);var k=0,im=d.querySelectorAll(".ci>*");if(im.length>1)setInterval(function(){im[k].classList.remove("on");k=(k+1)%im.length;im[k].classList.add("on")},3500)});
-var evs=document.querySelectorAll(".ev"),eo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add("in")})},{threshold:.3});evs.forEach(function(e){eo.observe(e)});
-var nv=document.querySelector("nav"),tl=document.querySelector(".tl2");
-function sp(){nv.classList.toggle("sc",scrollY>60);var r=tl.getBoundingClientRect(),p=Math.min(1,Math.max(0,(innerHeight*.6-r.top)/r.height));$("tlf").style.height=p*100+"%"}
-addEventListener("scroll",sp,{passive:true});sp();
-
-var GH="farrelandika";
-fetch("https://github-contributions-api.jogruber.de/v4/"+GH+"?y=last").then(function(r){return r.json()}).then(function(d){var c=d.contributions,t=0,hm=document.getElementById("hm");if(c.length){var pad=new Date(c[0].date).getDay();for(var i=0;i<pad;i++)hm.appendChild(document.createElement("i"))}c.forEach(function(x){t+=x.count;var e=document.createElement("i");e.dataset.l=x.level;e.title=x.date+": "+x.count+" contributions";hm.appendChild(e)});document.getElementById("ghs").textContent=t+" contributions in the last 12 months.";hm.scrollLeft=hm.scrollWidth}).catch(function(){document.getElementById("ghs").innerHTML='Could not load data. View it directly on <a href="https://github.com/'+GH+'" target="_blank" rel="noopener">GitHub profile</a>.'});
+// theme
+var root=document.documentElement;
+$("th").onclick=function(){var d=root.getAttribute("data-theme")||(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");root.setAttribute("data-theme",d==="dark"?"light":"dark")};
+// nav on scroll
+var nv=document.querySelector("nav");function sp(){nv.classList.toggle("sc",scrollY>60)}addEventListener("scroll",sp,{passive:true});sp();
+// typing
+var roles=["Informatics Student at Polinema","Frontend Developer","UI/UX Designer","Data Enthusiast","Hiker"],ri=0,ci=0,del=false,ty=$("ty");
+(function t(){var w=roles[ri];ty.textContent=w.slice(0,ci);if(!del&&ci<w.length){ci++;setTimeout(t,80)}else if(!del){del=true;setTimeout(t,1400)}else if(ci>0){ci--;setTimeout(t,40)}else{del=false;ri=(ri+1)%roles.length;setTimeout(t,300)}})();
+// hiking: 4 photos
+var HIKES=[["Lawu","3,265 m","images/Lawuu.jpeg"],["Panderman","2,045 m","images/LAWU.jpeg"],["Andong","1,726 m","images/Andongg.jpeg"],["Budug Asu","1,426 m","images/bokong.jpeg"]];
+HIKES.forEach(function(h){$("hk").insertAdjacentHTML("beforeend",'<figure><img src="'+h[2]+'" alt="'+h[0]+'" loading="lazy" onerror="this.remove()"><figcaption><b>'+h[0]+'</b>'+h[1]+'</figcaption></figure>')});
+// data
+var tracks=[["1979","The Smashing Pumpkins","5KRRcT67VNIZUygEbMoIC1"],["No Other Heart","Mac DeMarco","4laW52Dhj4RhmYqdXYiYw9"],["Nothing","Steve Lacy","3lIHa4fUwNKOCSS5k3Za0i"]];
+var MANGA=[{t:"I Will Love You Till Your Dying Day",src:"images/Love.jpeg"},{t:"Girls' Last Tour",src:"images/Girls' last.jpeg"},{t:"Goodnight Punpun",src:"images/Punpun.jpeg"}];
+var CAFES=[{n:"Kidang Djaja Um",d:"A place to unwind and enjoy a coffee.",p:"images/Kidang.jpeg"},{n:"11 12 Soehat",d:"A comfortable, cool place to work on assignments alone, with great desserts and an Americano just the way I like it.",p:"images/1112.jpeg"}];
+function selectTrack(t,d){document.querySelectorAll(".song").forEach(function(s){s.classList.remove("on")});d.classList.add("on");$("scr").innerHTML='<iframe src="https://open.spotify.com/embed/track/'+t[2]+'?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="'+t[0]+' by '+t[1]+'"></iframe>'}
+tracks.forEach(function(t){var d=document.createElement("div");d.className="song";d.innerHTML='<div class="eq"><i></i><i></i><i></i><i></i></div><div><b>'+t[0]+'</b><div class="mut">'+t[1]+'</div></div><a href="https://open.spotify.com/track/'+t[2]+'" target="_blank" rel="noopener">Spotify</a>';
+d.onclick=function(e){if(e.target.tagName==="A")return;selectTrack(t,d)};$("trk").appendChild(d)});
+selectTrack(tracks[2],document.querySelectorAll(".song")[2]);
+MANGA.forEach(function(m){$("mg").insertAdjacentHTML("beforeend",'<div class="mc"><div class="cv0"><img src="'+m.src+'" alt="'+m.t+'" loading="lazy" onerror="this.remove()"></div><p>'+m.t+'</p></div>')});
+CAFES.forEach(function(c){$("cf").insertAdjacentHTML("beforeend",'<div class="cc"><div class="ci"><img src="'+c.p+'" alt="'+c.n+'" loading="lazy" onerror="this.remove()"></div><h3>'+c.n+'</h3><p class="mut" style="margin:0">'+c.d+'</p></div>')});
 </script>
 </body>
 </html>
