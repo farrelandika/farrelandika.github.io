@@ -8,6 +8,8 @@
 <meta property="og:title" content="Farrel Andika Chandra | Portfolio">
 <meta property="og:description" content="Frontend developer and UI/UX designer based in Malang.">
 <meta property="og:image" content="images/hero.jpg">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.16.0/devicon.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500&family=Permanent+Marker&display=swap" rel="stylesheet">
 <style>
@@ -61,6 +63,12 @@ h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.4rem}
 .cov img{width:100%;height:100%;object-fit:contain;display:block}
 /* skills */
 .two{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.sg{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:.8rem;margin-bottom:2rem}
+.sg.big{grid-template-columns:repeat(auto-fill,minmax(120px,1fr))}
+.st{display:flex;flex-direction:column;align-items:center;gap:.6rem;padding:1.1rem .5rem;background:var(--card);border:1px solid var(--bd);border-radius:12px;font-size:.85rem;text-align:center;transition:transform .25s,border-color .25s}
+.st i{font-size:2.2rem}.sg.big .st i{font-size:2.8rem}
+.st:hover{transform:translateY(-4px);border-color:var(--ac)}
+.skh{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin:0 0 .8rem}
 /* timeline */
 .tl{border-left:2px solid var(--bd);padding-left:1.6rem;margin-left:.5rem}
 .tl>article{position:relative;margin-bottom:1.4rem}
@@ -91,8 +99,8 @@ h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.4rem}
 .row2{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
 .mc{perspective:700px}
 .cv0{aspect-ratio:2/3;border-radius:12px;overflow:hidden;border:1px solid var(--bd);background:linear-gradient(145deg,#2a3166,#6b2d6e);transition:transform .4s;transform-style:preserve-3d}
-.cv0 img,.ci img{width:100%;height:100%;object-fit:cover;display:block}
 @media(hover:hover){.mc:hover .cv0{transform:rotateY(-8deg) translateY(-4px)}}
+.cv0 img,.ci img{width:100%;height:100%;object-fit:cover;display:block}
 .mc p{margin:.6rem 0 0;font-weight:500}
 .ci{aspect-ratio:4/3;border-radius:14px;overflow:hidden;border:1px solid var(--bd);background:linear-gradient(145deg,#2a3166,#6b2d6e)}
 .cc h3{margin:.8rem 0 .2rem}
@@ -139,13 +147,30 @@ footer{padding:2rem 1rem;text-align:center;color:var(--mut);font-size:.85rem}
 <p class="mut">A comparison of two decision-support methods for selecting village fund cash assistance recipients. <!-- Tambahkan status: jurnal / prosiding / tugas kuliah --></p></div>
 </div></section>
 
-<section id="skills"><div class="w"><h2>Skills</h2><p class="sub">Grouped by what I actually use them for.</p>
-<div class="two">
-<div class="card"><h3>Frontend & Design</h3><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">UI/UX Design</span><span class="tag">Figma</span></div>
-<div class="card"><h3>Backend & Data</h3><span class="tag">Laravel</span><span class="tag">REST API</span><span class="tag">SQL</span><span class="tag">Python</span></div>
-<div class="card"><h3>Tools</h3><span class="tag">Git</span><span class="tag">GitHub</span></div>
-<div class="card"><h3>Communication</h3><span class="tag">English debate</span><span class="tag">Teamwork</span><p class="mut" style="margin-top:.8rem">One year of English debate in high school. No official TOEFL/IELTS yet.</p></div>
-</div></div></section>
+<section id="skills"><div class="w"><h2>Skills</h2><p class="sub">The tools I use to design, build, and ship.</p>
+<p class="skh">Frontend & Design</p>
+<div class="sg big">
+<div class="st"><i class="devicon-html5-plain colored"></i>HTML</div>
+<div class="st"><i class="devicon-css3-plain colored"></i>CSS</div>
+<div class="st"><i class="devicon-javascript-plain colored"></i>JavaScript</div>
+<div class="st"><i class="devicon-flutter-plain colored"></i>Flutter</div>
+<div class="st"><i class="devicon-figma-plain colored"></i>Figma</div>
+</div>
+<p class="skh">Backend & Data</p>
+<div class="sg">
+<div class="st"><i class="devicon-laravel-plain colored"></i>Laravel</div>
+<div class="st"><i class="devicon-python-plain colored"></i>Python</div>
+<div class="st"><i class="devicon-postgresql-plain colored"></i>SQL</div>
+</div>
+<p class="skh">Tools</p>
+<div class="sg">
+<div class="st"><i class="devicon-git-plain colored"></i>Git</div>
+<div class="st"><i class="devicon-github-original"></i>GitHub</div>
+<div class="st"><i class="devicon-vscode-plain colored"></i>VS Code</div>
+<div class="st"><i class="devicon-androidstudio-plain colored"></i>Android Studio</div>
+</div>
+<p class="mut">Also used: DBeaver, pgAdmin, Oracle Database, Laragon. English debate and teamwork from a year of high school debate.</p>
+</div></section>
 
 <section class="alt" id="experience"><div class="w"><h2>Organizational Experience</h2><p class="sub">Learning to lead, work in the field, and speak in front of an audience.</p>
 <div class="tl">
